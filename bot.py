@@ -102,7 +102,6 @@ async def start(message: types.Message) -> None:
 @dp.message(F.content_type == "voice")
 async def precess_voice_message(message: types.Message, bot: Bot) -> None:
     voice_path = await save_voice(bot, message.voice)
-
     if voice_path:
         voice = types.FSInputFile(voice_path)
         await bot.send_voice(message.chat.id, voice)
