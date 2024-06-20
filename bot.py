@@ -3,7 +3,6 @@ import sys
 import asyncio
 import io
 import logging
-import types
 from dotenv import load_dotenv
 from openai import OpenAI
 from aiogram import Bot, Dispatcher, F, Router, types
